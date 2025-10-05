@@ -1,0 +1,156 @@
+{
+  "profile": { "name": "María Flores", "email": "maria@correo.com", "city": "Cochabamba", "conditions": ["asthma"], "avatarUrl": "" },
+  "health": { "tips": ["Usa mascarilla si el PM2.5 > 35 μg/m³.", "Evita actividades al aire libre durante incendios cercanos."] },
+  "alerts": [
+    { "id": "a1", "type": "air", "title": "PM2.5 alto", "message": "Nivel moderado a crítico en tu zona", "time": 1720001000000 }
+  ],
+  "help": {
+    "emergencyNumbers": [
+      { "type": "police", "label": "Policía", "phone": "110", "reliability": "official" },
+      { "type": "ambulance", "label": "Ambulancia/Salud", "phone": "168", "reliability": "official" },
+      { "type": "fire", "label": "Bomberos", "phone": "119", "reliability": "official" },
+      { "type": "civil_defense", "label": "Defensa Civil", "phone": "115", "reliability": "community" },
+      { "type": "environment", "label": "Autoridad Ambiental", "phone": "800-000-000", "reliability": "community" }
+    ],
+    "poi": [
+      { "type": "hospital", "name": "Hospital General", "lat": -17.389, "lng": -66.156, "open24h": true, "phone": "444-0000", "aqi": 82 },
+      { "type": "shelter",  "name": "Refugio San Martín", "lat": -17.402, "lng": -66.165, "open24h": false, "phone": "444-1111", "aqi": 60 }
+    ],
+    "guides": [
+      { "id": "g1", "title": "Qué hacer si hay incendio/humo", "bullets": ["Cierra puertas/ventanas", "Usa mascarilla N95", "Evita esfuerzo físico"] },
+      { "id": "g2", "title": "Tormenta/Granizada: pasos rápidos", "bullets": ["Busca refugio", "Desconecta aparatos", "Evita zonas abiertas"] },
+      { "id": "g3", "title": "Mala calidad del aire", "bullets": ["Limita actividades exteriores", "Ventilación con filtro", "Hidratación frecuente"] },
+      { "id": "g4", "title": "Kit básico", "bullets": ["N95", "Gafas", "Agua", "Linterna", "Medicamentos"] },
+      { "id": "g5", "title": "Señales de alarma respiratoria", "bullets": ["Dificultad para respirar", "Labios azulados", "Consulta urgente"] }
+    ]
+  },
+
+  "registration": {
+    "schemaVersion": "1.0",
+    "createdAt": "2025-10-05T12:00:00Z",
+    "updatedAt": "2025-10-05T12:00:00Z",
+    "readOnly": true,
+    "readOnlyReason": "Datos de registro confirmados; edición solo mediante solicitud justificada.",
+    "readOnlyFields": ["profile","medicalInfo","notificationPreferences","location","terms","dependents"],
+    "editRequests": [],
+
+    "account": {
+      "id": "user_maria_001",
+      "fullName": "María Flores",
+      "username": "maria.flores",
+      "email": "maria@correo.com",
+      "role": "guardian",
+      "guardianOf": ["dep_hijo_sano_001","dep_hijo_asma_001"]
+    },
+
+    "auth": {
+      "provider": "email",
+      "emailVerified": true
+    },
+
+    "medicalInfo": {
+      "hasRespiratoryCondition": true,
+      "conditions": {
+        "asma": true,
+        "alergias": false,
+        "epoc": false,
+        "bronquitis": false,
+        "otro": ""
+      },
+      "usesMedication": false,
+      "medications": []
+    },
+
+    "notificationPreferences": {
+      "channels": { "inApp": true, "email": true, "sms": false },
+      "topics": { "airQualityRealtime": true, "pollutionAlerts": true, "healthTips": true },
+      "language": "es",
+      "units": "metric"
+    },
+
+    "location": {
+      "city": "Cochabamba",
+      "country": "Bolivia",
+      "personalizedAlertsEnabled": true
+    },
+
+    "terms": {
+      "accepted": true,
+      "version": "2025-01",
+      "acceptedAt": "2025-10-05T12:00:00Z",
+      "cannotModify": true
+    },
+
+    "dependents": [
+      {
+        "id": "dep_hijo_sano_001",
+        "fullName": "Hijo Sano",
+        "dateOfBirth": "2014-05-20",
+        "isMinor": true,
+        "medicalInfo": {
+          "hasRespiratoryCondition": false,
+          "conditions": { "asma": false, "alergias": false, "epoc": false, "bronquitis": false, "otro": "" },
+          "usesMedication": false,
+          "medications": []
+        },
+        "notifications": {
+          "allowed": false,
+          "reason": "Menor de edad: notificaciones se enrutan al tutor.",
+          "proxyRecipient": { "userId": "user_maria_001", "fullName": "María Flores", "channels": ["inApp","email"] }
+        }
+      },
+      {
+        "id": "dep_hijo_asma_001",
+        "fullName": "Hijo con Asma",
+        "dateOfBirth": "2017-11-03",
+        "isMinor": true,
+        "medicalInfo": {
+          "hasRespiratoryCondition": true,
+          "conditions": { "asma": true, "alergias": false, "epoc": false, "bronquitis": false, "otro": "" },
+          "diagnosisNotes": "Asma desde nacimiento.",
+          "usesMedication": true,
+          "medications": ["Salbutamol inhalado según indicación","Corticoide inhalado de mantenimiento"]
+        },
+        "notifications": {
+          "allowed": false,
+          "reason": "Menor de edad: notificaciones deshabilitadas; solo la madre recibe.",
+          "proxyRecipient": { "userId": "user_maria_001", "fullName": "María Flores", "channels": ["inApp","email"] }
+        }
+      }
+    ],
+
+    "uiLocks": {
+      "showEditButton": true,
+      "unlockRequiresRequest": true,
+      "editRequestTemplate": {
+        "reason": "",
+        "details": "",
+        "requestedBy": "user_maria_001",
+        "requestedAt": null,
+        "status": "draft"
+      }
+    },
+
+    "registrationFlow": {
+      "screensCompleted": [1,3,4,5,6],
+      "screenData": {
+        "screen1_account": { "fullName": "María Flores", "username": "maria.flores" },
+        "screen3_medical": {
+          "asma": true,
+          "alergiasRespiratorias": false,
+          "epoc": false,
+          "bronquitis": false,
+          "otro": "",
+          "usesMedication": false,
+          "medications": ""
+        },
+        "screen4_notifications": {
+          "channels": ["inApp","email"],
+          "topics": ["airQualityRealtime","pollutionAlerts","healthTips"]
+        },
+        "screen5_location": { "city": "Cochabamba", "country": "Bolivia", "personalizedAlertsEnabled": true },
+        "screen6_terms": { "accepted": true, "version": "2025-01" }
+      }
+    }
+  }
+}
