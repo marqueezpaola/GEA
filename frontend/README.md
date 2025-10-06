@@ -1,16 +1,22 @@
 GEA — Air Quality and Alert Platform (Frontend)
 
 Technical Overview
+
 Frontend developed with Next.js (React 18, no TypeScript).
+
 To install and run locally, access the gea/frontend/ directory and execute:
 
+
 cd frontend
+
 npm install
 
 This will automatically create the .next and node_modules folders if missing.
+
 To start the development environment:
 
 npm run dev
+
 Then open the browser at http://localhost:3000
 
 For mobile view: press Ctrl + Shift + I and select “Mobile mode”.
