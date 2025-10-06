@@ -31,7 +31,7 @@ __________________
 
 Installation Guide
 Clone the repository
-git clone https://github.com/marqueezzpaola/GEA.git
+git clone https://github.com/marqueezpaola/GEA.git
 
 
 Backend dependencies
