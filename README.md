@@ -12,17 +12,27 @@ Purpose
 GEA transforms scientific data into practical tools for citizen prevention and informed decision-making.
 Its main goal is to reduce the impact of atmospheric pollution on public health, especially among vulnerable populations.
 
-GEA/backend/                                 # Backend notebooks and data processing modules
-GEA/backend/Example/                         # Example of NASA POWER + FIRMS data integration
+GEA/backend/                                 	  # Backend notebooks and data processing modules
+
+GEA/backend/Example/                         	  # Example of NASA POWER + FIRMS data integration
+
 GEA/backend/AirQuality_SEMAPA_Cochabamba.ipynb    # Air quality analysis and modeling for Cochabamba
+
 GEA/backend/AirQuality_Dataset_Pipeline.ipynb     # Data cleaning and feature extraction pipeline
+
 GEA/backend/Meteorological_Features_IT.ipynb      # Weather data modeling and variable correlation
+
 GEA/backend/README_Datasets.txt                   # Documentation and notes for dataset usage
 
+
 GEA/frontend/                               # Web application (Next.js)
+
 GEA/frontend/app/                           # Source code and main pages for the web interface
+
 GEA/frontend/public/                        # Static files, assets, and icons
+
 GEA/frontend/services/                      # Local API handlers and helper functions
+
 GEA/frontend/README.txt                     # Frontend module documentation
 
 GEA/README.md                               # Main project documentation (global overview)
@@ -31,7 +41,7 @@ __________________
 
 Installation Guide
 Clone the repository
-git clone https://github.com/marqueezpaola/GEA.git
+git clone https://github.com/marqueezzpaola/GEA.git
 
 
 Backend dependencies
@@ -56,6 +66,7 @@ Select “Mobile view” in your browser’s developer tools.
 Resources and Demonstrations
 Demo Video:
 https://youtu.be/Nv2gTpoO7To?si=m9YrU4B753CH9hiP
+
 
 
 
