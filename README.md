@@ -1,42 +1,64 @@
-GEA — Plataforma de alertas y calidad de aire (Frontend)
+GEA — Environmental Exposure Manager
 
-Visualización y reporte ciudadano de incidentes ambientales (viento, AQI, incendios) con Next.js 15.
-Incluye mapa con heatmap, “flechas” de viento, pestañas móviles y un drawer de reporte con foto/ubicación.
+General Description
+GEA is an integrated system that combines an environmental monitoring network with artificial intelligence models and a web application to predict, visualize, and reduce human exposure to air pollution.
 
-Video demo: https://youtu.be/Nv2gTpoO7To?si=m9YrU4B753CH9hiP
+System Components
+    - Backend: data processing, integration with NASA APIs, and predictive air quality modeling.
+    - Frontend: interactive web application that allows users to visualize data, receive alerts, and submit community reports.
 
-Datasets incluidos
--  Calidad de Aire SEMAPA (Cochabamba)
-Medición de contaminantes (PM, NO₂, O₃) y variables ambientales (temperatura, humedad, presión) en zona SEMAPA.
+Purpose
 
--   Concentración de Aire en Salta (AR)
-Registros de CO, NO₂, O₃ y material particulado + meteorología. Útil para analizar variaciones temporales y efectos en salud.
+GEA transforms scientific data into practical tools for citizen prevention and informed decision-making.
+Its main goal is to reduce the impact of atmospheric pollution on public health, especially among vulnerable populations.
 
-- Conjunto de Calidad de Aire (multi-urbano)
-Serie con gases contaminantes, partículas y variables meteorológicas para estudiar tendencias y evolución temporal.
+GEA/
+ ├─ backend/
+ │   ├─ Example/                # Integration with NASA POWER + FIRMS
+ │   ├─ AirQuality_SEMAPA_Cochabamba.ipynb
+ │   ├─ AirQuality_Dataset_Pipeline.ipynb
+ │   ├─ Meteorological_Features_IT.ipynb
+ │   └─ README_Datasets.txt
+ │
+ ├─ frontend/
+ │   ├─ app/                    # Frontend source code (Next.js)
+ │   ├─ public/                 # Static assets
+ │   ├─ services/               # Local API routes and utilities
+ │   └─ README.txt              # Frontend-specific documentation
+ │
+ └─ README.md                   # This file (global documentation)
 
-- Datos Climatológicos IT
-Estación del Instituto Tecnológico: temperatura, humedad, viento, radiación, precipitación. Soporta modelado ambiental.
 
-- Fire (NASA)
-Variables que influyen en incendios (temperatura, humedad, viento, precipitación) y detección satelital. Para análisis y predicción.
+Installation Guide
 
-Funcionalidades principales
-- Mapa (Google Maps)
-- Heatmap configurable.
-- Marcadores de viento y AQI (íconos SVG).
-- “Cascadas” de flechas para dirección del viento.
-- Barra de pestañas (Mapa, Ayuda, Alertas, Perfil) con badge.
-- Bottom sheet informativo (deslizable).
-- ReportDrawer para reportar incidentes (foto, tipo, severidad, GPS, texto).
+Clone the repository
+git clone https://github.com/marqueezzpaola/GEA.git
 
-API local (Route Handlers de Next)
-    /api/appdata (GET)
-    /api/appdata/alerts-count (GET)
-    /api/profile (GET/PATCH) — persiste en data/app.json.
 
-Requisitos
-- Node.js 18+
-- Cuenta y API Key de Google Maps con Facturación habilitada
+Backend dependencies
+The backend consists mainly of Jupyter Notebooks.
+You can execute them directly in Google Colab or in your local Jupyter environment.
+
+Frontend setup
+cd frontend
+npm install
+
+
+Run the development environment
+npm run dev
+
+Open in browser
+http://localhost:3000
+
+To preview in mobile mode
+Press CTRL + SHIFT + I
+Select “Mobile view” in your browser’s developer tools.
+
+Resources and Demonstrations
+Demo Video:
+https://youtu.be/Nv2gTpoO7To?si=m9YrU4B753CH9hiP
+
+
+
 
 
