@@ -1,0 +1,1 @@
+Data source: NASA FIRMS (24h) & NASA POWER (UTC: 2025-10-04 00:00→2025-10-05 23:00) — Ciudad: Tarija, BO.
